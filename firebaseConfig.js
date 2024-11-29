@@ -1,22 +1,20 @@
-import firebase from 'firebase/app';
-import 'firebase/database';  // Import Realtime Database
+// firebaseConfig.js
+import { initializeApp } from 'firebase/app';
+import { getDatabase, ref, push, update } from 'firebase/database';
 
-// Firebase configuration details from the Firebase console
 const firebaseConfig = {
-  apiKey: 'YOUR_API_KEY',
-  authDomain: 'YOUR_AUTH_DOMAIN',
-  databaseURL: 'YOUR_DATABASE_URL',
-  projectId: 'YOUR_PROJECT_ID',
-  storageBucket: 'YOUR_STORAGE_BUCKET',
-  messagingSenderId: 'YOUR_SENDER_ID',
-  appId: 'YOUR_APP_ID',
+    apiKey: "AIzaSyDZV7taFCNWJSq-vQdPFlp0fYkyBrzR_ks",
+    authDomain: "webclone-581b7.firebaseapp.com",
+    projectId: "webclone-581b7",
+    storageBucket: "webclone-581b7.firebasestorage.app",
+    messagingSenderId: "934204454708",
+    appId: "1:934204454708:web:14aeb7f218ce5c8d4d9761"
 };
 
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
 
-if (!firebase.apps.length) {
-  firebase.initializeApp(firebaseConfig);
-} else {
-  firebase.app();  
-}
+// Get a reference to the database
+const database = getDatabase(app);
 
-export { firebase };
+export { database, push, update, ref };
