@@ -94,7 +94,7 @@ const RideRequestForm = () => {
 
       {/* Custom Button with TouchableOpacity */}
       <TouchableOpacity style={styles.button} onPress={handleRequestRide}>
-        <Text style={styles.buttonText}>Request Ride</Text>
+        <Text style={styles.buttonText}>Book Ride</Text>
       </TouchableOpacity>
     </View>
   );
