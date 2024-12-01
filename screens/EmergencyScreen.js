@@ -3,9 +3,6 @@ import { View, Text, StyleSheet, TouchableOpacity, Alert, Linking, SafeAreaView 
 
 
 
-// import Components
-import TakePhotoEmergency from '../components/TakePhotoEmergency';
-
 const EmergencyScreen = () => {
   // Function to handle call to 911
   const call911 = () => {
@@ -28,7 +25,6 @@ const EmergencyScreen = () => {
       <View style={styles.header}>
         <Text style={styles.title}>Emergency Services</Text>
       </View>
-      <TakePhotoEmergency/>
       <View style={styles.content}>
         <TouchableOpacity style={styles.button} onPress={call911}>
           <Text style={styles.buttonText}>Call 911</Text>
