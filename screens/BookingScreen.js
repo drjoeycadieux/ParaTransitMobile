@@ -9,7 +9,7 @@ const BookingScreen = () => {
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
         style={styles.formContainer}
-        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        behavior={Platform.OS === 'android' ? 'padding' : 'height'}
       >
         <RideRequestForm />
       </KeyboardAvoidingView>
