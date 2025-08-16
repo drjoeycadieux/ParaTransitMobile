@@ -1,20 +1,6 @@
-// firebaseConfig.js
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, push, update } from 'firebase/database';
+// Legacy firebaseConfig.js - redirects to new structure
+// This file is kept for backward compatibility
+// New code should use src/services/firebase.js
 
-const firebaseConfig = {
-    apiKey: "",
-    authDomain: "",
-    projectId: "",
-    storageBucket: "",
-    messagingSenderId: "",
-    appId: ""
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-// Get a reference to the database
-const database = getDatabase(app);
-
-export { database, push, update, ref };
+export { database } from './src/services/firebase';
+export { ref, push, update } from 'firebase/database';
